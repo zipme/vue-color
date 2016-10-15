@@ -21,8 +21,7 @@ import checkboard from './Checkboard.vue'
 export default {
   name: 'Alpha',
   props: {
-    value: Object,
-    onChange: Function
+    value: Object
   },
   components: {
     checkboard
@@ -54,7 +53,7 @@ export default {
       }
 
       if (this.colors.a !== a) {
-        this.onChange({
+        this.$emit('on-change', {
           h: this.colors.hsl.h,
           s: this.colors.hsl.s,
           l: this.colors.hsl.l,
