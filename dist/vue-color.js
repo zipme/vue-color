@@ -103,37 +103,46 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(2)
-	__vue_script__ = __webpack_require__(6)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Compact.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(14)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(6)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(14)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0d85ddf4/Compact.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-1", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-1", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Compact.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 2 */
@@ -151,8 +160,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Compact.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Compact.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Compact.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-1!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Compact.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -170,7 +179,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.vue-color__compact__colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.vue-color__compact__color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.vue-color__compact__color-item--white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.vue-color__compact__color-item--white .vue-color__compact__dot {\n  background: #000;\n}\n.vue-color__compact__dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.vue-color__compact__fields {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.vue-color__compact__fields .vue-color__editable-input__input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.vue-color__compact__fields .vue-color__editable-input__label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n.vue-color__compact__pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.vue-color__compact__col-3 {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vue_color__compact__col-hex {\n  -webkit-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.vue_color__compact__col-hex .vue-color__editable-input__input {\n  width: 80%;\n  padding-left: 20%;\n}\n.vue_color__compact__col-hex .vue-color__editable-input__label {\n  display: none;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__compact {\n  padding-top: 5px;\n  padding-left: 5px;\n  width: 240px;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.vue-color__compact__colors {\n  overflow: hidden;\n  padding: 0;\n  margin: 0;\n}\n.vue-color__compact__color-item {\n  list-style: none;\n  width: 15px;\n  height: 15px;\n  float: left;\n  margin-right: 5px;\n  margin-bottom: 5px;\n  position: relative;\n  cursor: pointer;\n}\n.vue-color__compact__color-item--white {\n  box-shadow: inset 0 0 0 1px #ddd;\n}\n.vue-color__compact__color-item--white .vue-color__compact__dot {\n  background: #000;\n}\n.vue-color__compact__dot {\n  position: absolute;\n  top: 5px;\n  right: 5px;\n  bottom: 5px;\n  left: 5px;\n  border-radius: 50%;\n  opacity: 1;\n  background: #fff;\n}\n.vue-color__compact__fields {\n  display: flex;\n  position: relative;\n  padding-bottom: 6px;\n  padding-right: 5px;\n  position: relative;\n}\n.vue-color__compact__fields .vue-color__editable-input__input {\n  width: 70%;\n  padding-left: 30%;\n  background: none;\n  font-size: 12px;\n  color: #333;\n  height: 16px;\n}\n.vue-color__compact__fields .vue-color__editable-input__label {\n  position: absolute;\n  top: 3px;\n  left: 0;\n  line-height: 16px;\n  text-transform: uppercase;\n  font-size: 12px;\n  color: #999;\n}\n.vue-color__compact__pick-color {\n  position: absolute;\n  top: 6px;\n  left: 5px;\n  height: 9px;\n  width: 9px;\n}\n.vue-color__compact__col-3 {\n  flex: 1;\n}\n.vue_color__compact__col-hex {\n  flex: 2;\n}\n.vue_color__compact__col-hex .vue-color__editable-input__input {\n  width: 80%;\n  padding-left: 20%;\n}\n.vue_color__compact__col-hex .vue-color__editable-input__label {\n  display: none;\n}\n", ""]);
 
 	// exports
 
@@ -1821,37 +1830,46 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(10)
-	__vue_script__ = __webpack_require__(12)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/common/EditableInput.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(13)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(12)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(13)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3a4096e1/EditableInput.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-8", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-8", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] EditableInput.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 10 */
@@ -1869,8 +1887,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./EditableInput.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./EditableInput.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditableInput.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-8!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./EditableInput.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -1888,7 +1906,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__editable-input {\n  position: relative;\n}\n.vue-color__editable-input__input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.vue-color__editable-input__label {\n  text-transform: capitalize;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__editable-input {\n  position: relative;\n}\n.vue-color__editable-input__input {\n  padding: 0;\n  border: 0;\n  outline: none;\n}\n.vue-color__editable-input__label {\n  text-transform: capitalize;\n}\n", ""]);
 
 	// exports
 
@@ -1967,51 +1985,125 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 13 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__editable-input\">\n  <input class=\"vue-color__editable-input__input\"\n    v-model=\"value\"\n    @keydown=\"handleKeyDown\"\n    @input=\"handleChange\">\n  <span class=\"vue-color__editable-input__label\">{{label}}</span>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__editable-input"
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (value),
+	      expression: "value"
+	    }],
+	    staticClass: "vue-color__editable-input__input",
+	    domProps: {
+	      "value": _s(value)
+	    },
+	    on: {
+	      "keydown": handleKeyDown,
+	      "input": [function($event) {
+	        if ($event.target.composing) return;
+	        value = $event.target.value
+	      }, handleChange]
+	    }
+	  }), " ", _h('span', {
+	    staticClass: "vue-color__editable-input__label"
+	  }, [_s(label)])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-8", module.exports)
+	  }
+	}
 
 /***/ },
 /* 14 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__compact\">\n  <ul class=\"vue-color__compact__colors\">\n    <li class=\"vue-color__compact__color-item\" v-for=\"c in defaultColors\"\n      @click=\"handlerClick(c)\"\n      :class=\"{'vue-color__compact__color-item--white': c === '#FFFFFF' }\"\n      :style=\"{background: c}\">\n      <div class=\"vue-color__compact__dot\" v-show=\"c === pick\"></div>\n    </li>\n  </ul>\n  <!-- <div class=\"vue-color__compact__fields\">\n    <div class=\"vue-color__compact__pick-color\" :style=\"{background: pick}\"></div>\n    <div class=\"vue_color__compact__col-hex\">\n      <ed-in label=\"vue-color__compact__hex\"\n      :val.sync=\"colors.hex\"\n      :style=\"{ borderColor: colors.hex }\"\n      :on-change=\"onChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__compact__col-3\">\n      <ed-in label=\"r\" :val.sync=\"colors.rgba.r\"\n      :on-change=\"onChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__compact__col-3\">\n      <ed-in label=\"g\" :val.sync=\"colors.rgba.g\"\n      :on-change=\"onChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__compact__col-3\">\n      <ed-in label=\"b\" :val.sync=\"colors.rgba.b\"\n      :on-change=\"onChange\"></ed-in>\n    </div>\n  </div> -->\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__compact"
+	  }, [_h('ul', {
+	    staticClass: "vue-color__compact__colors"
+	  }, [_l((defaultColors), function(c) {
+	    return _h('li', {
+	      staticClass: "vue-color__compact__color-item",
+	      class: {
+	        'vue-color__compact__color-item--white': c === '#FFFFFF'
+	      },
+	      style: ({
+	        background: c
+	      }),
+	      on: {
+	        "click": function($event) {
+	          handlerClick(c)
+	        }
+	      }
+	    }, [_h('div', {
+	      directives: [{
+	        name: "show",
+	        rawName: "v-show",
+	        value: (c === pick),
+	        expression: "c === pick"
+	      }],
+	      staticClass: "vue-color__compact__dot"
+	    })])
+	  })]), " "])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-1", module.exports)
+	  }
+	}
 
 /***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(16)
-	__vue_script__ = __webpack_require__(18)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Material.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(19)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(18)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(19)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-20ec29a6/Material.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-2", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-2", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Material.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 16 */
@@ -2029,8 +2121,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Material.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Material.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Material.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Material.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2048,7 +2140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: \"Roboto\";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.vue-color__material .vue-color__editable-input__input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.vue-color__material .vue-color__editable-input__label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n.vue-color__material__hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.vue-color__material__split {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.vue-color__material__third {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-right: 10px;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__material {\n  width: 98px;\n  height: 98px;\n  padding: 16px;\n  font-family: \"Roboto\";\n  position: relative;\n  border-radius: 2px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.vue-color__material .vue-color__editable-input__input {\n  width: 100%;\n  margin-top: 12px;\n  font-size: 15px;\n  color: #333;\n  height: 30px;\n}\n.vue-color__material .vue-color__editable-input__label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-size: 11px;\n  color: #999;\n  text-transform: capitalize;\n}\n.vue-color__material__hex {\n  border-bottom-width: 2px;\n  border-bottom-style: solid;\n}\n.vue-color__material__split {\n  display: flex;\n  margin-right: -10px;\n  padding-top: 11px;\n}\n.vue-color__material__third {\n  flex: 1;\n  padding-right: 10px;\n}\n", ""]);
 
 	// exports
 
@@ -2104,45 +2196,152 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 19 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n\n<div class=\"vue-color__material\">\n  <ed-in class=\"vue-color__material__hex\" label=\"hex\" v-model=\"colors.hex\"\n    :style=\"{ borderColor: colors.hex }\" @on-change=\"onChange\"></ed-in>\n\n  <div class=\"vue-color__material__split\">\n    <div class=\"vue-color__material__third\">\n      <ed-in label=\"r\" v-model=\"colors.rgba.r\"\n      @on-change=\"onChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__material__third\">\n      <ed-in label=\"g\" v-model=\"colors.rgba.g\"\n      @on-change=\"onChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__material__third\">\n      <ed-in label=\"b\" v-model=\"colors.rgba.b\"\n      @on-change=\"onChange\"></ed-in>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__material"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hex),
+	      expression: "colors.hex"
+	    }],
+	    staticClass: "vue-color__material__hex",
+	    style: ({
+	      borderColor: colors.hex
+	    }),
+	    attrs: {
+	      "label": "hex"
+	    },
+	    domProps: {
+	      "value": (colors.hex)
+	    },
+	    on: {
+	      "on-change": onChange,
+	      "input": function($event) {
+	        colors.hex = $event
+	      }
+	    }
+	  }), " ", _h('div', {
+	    staticClass: "vue-color__material__split"
+	  }, [_h('div', {
+	    staticClass: "vue-color__material__third"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.r),
+	      expression: "colors.rgba.r"
+	    }],
+	    attrs: {
+	      "label": "r"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.r)
+	    },
+	    on: {
+	      "on-change": onChange,
+	      "input": function($event) {
+	        colors.rgba.r = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__material__third"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.g),
+	      expression: "colors.rgba.g"
+	    }],
+	    attrs: {
+	      "label": "g"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.g)
+	    },
+	    on: {
+	      "on-change": onChange,
+	      "input": function($event) {
+	        colors.rgba.g = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__material__third"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.b),
+	      expression: "colors.rgba.b"
+	    }],
+	    attrs: {
+	      "label": "b"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.b)
+	    },
+	    on: {
+	      "on-change": onChange,
+	      "input": function($event) {
+	        colors.rgba.b = $event
+	      }
+	    }
+	  })])])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-2", module.exports)
+	  }
+	}
 
 /***/ },
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(21)
-	__vue_script__ = __webpack_require__(23)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Slider.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(29)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(23)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(29)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0cda03c0/Slider.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-3", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-3", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Slider.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 21 */
@@ -2160,8 +2359,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Slider.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Slider.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-3!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Slider.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-3!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Slider.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2179,7 +2378,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__slider {\n  position: relative;\n  width: 410px;\n}\n.vue-color__slider__hue-warp {\n  height: 12px;\n  position: relative;\n}\n.vue-color__slider__hue-warp .vue-color__c-hue__picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  -webkit-transform: translate(-7px, -2px);\n          transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.vue-color__slider__swatches {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-top: 20px;\n}\n.vue-color__slider__swatch {\n  margin-right: 1px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  width: 20%;\n}\n.vue-color__slider__swatch:first-child {\n  margin-right: 1px;\n}\n.vue-color__slider__swatch:first-child .vue-color__slider__swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.vue-color__slider__swatch:last-child {\n  margin-right: 0;\n}\n.vue-color__slider__swatch:last-child .vue-color__slider__swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.vue-color__slider__swatch-picker {\n  cursor: pointer;\n  height: 12px;\n}\n.vue-color__slider__swatch-picker--active {\n  -webkit-transform: scaleY(1.8);\n          transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__slider {\n  position: relative;\n  width: 410px;\n}\n.vue-color__slider__hue-warp {\n  height: 12px;\n  position: relative;\n}\n.vue-color__slider__hue-warp .vue-color__c-hue__picker {\n  width: 14px;\n  height: 14px;\n  border-radius: 6px;\n  transform: translate(-7px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.vue-color__slider__swatches {\n  display: flex;\n  margin-top: 20px;\n}\n.vue-color__slider__swatch {\n  margin-right: 1px;\n  flex: 1;\n  width: 20%;\n}\n.vue-color__slider__swatch:first-child {\n  margin-right: 1px;\n}\n.vue-color__slider__swatch:first-child .vue-color__slider__swatch-picker {\n  border-radius: 2px 0px 0px 2px;\n}\n.vue-color__slider__swatch:last-child {\n  margin-right: 0;\n}\n.vue-color__slider__swatch:last-child .vue-color__slider__swatch-picker {\n  border-radius: 0px 2px 2px 0px;\n}\n.vue-color__slider__swatch-picker {\n  cursor: pointer;\n  height: 12px;\n}\n.vue-color__slider__swatch-picker--active {\n  transform: scaleY(1.8);\n  border-radius: 3.6px/2px;\n}\n", ""]);
 
 	// exports
 
@@ -2246,37 +2445,46 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(25)
-	__vue_script__ = __webpack_require__(27)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/common/Hue.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(28)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(27)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(28)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-424362d3/Hue.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-9", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-9", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Hue.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 25 */
@@ -2294,8 +2502,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Hue.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Hue.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Hue.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Hue.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2313,7 +2521,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.vue-color__c-hue--horizontal {\n  background: -webkit-linear-gradient(left, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.vue-color__c-hue--vertical {\n  background: -webkit-linear-gradient(bottom, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.vue-color__c-hue__container {\n  cursor: pointer;\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.vue-color__c-hue__pointer {\n  z-index: 2;\n  position: absolute;\n}\n.vue-color__c-hue__picker {\n  cursor: pointer;\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  -webkit-transform: translateX(-2px);\n          transform: translateX(-2px);\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__c-hue {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  border-radius: 2px;\n}\n.vue-color__c-hue--horizontal {\n  background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.vue-color__c-hue--vertical {\n  background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n}\n.vue-color__c-hue__container {\n  cursor: pointer;\n  margin: 0 2px;\n  position: relative;\n  height: 100%;\n}\n.vue-color__c-hue__pointer {\n  z-index: 2;\n  position: absolute;\n}\n.vue-color__c-hue__picker {\n  cursor: pointer;\n  margin-top: 1px;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  transform: translateX(-2px);\n}\n", ""]);
 
 	// exports
 
@@ -2431,51 +2639,138 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 28 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div :class=\"['vue-color__c-hue', directionClass]\">\n  <div class=\"vue-color__c-hue__container\" ref=\"container\"\n    @mousedown=\"handleMouseDown\"\n    @touchmove=\"handleChange\"\n    @touchstart=\"handleChange\">\n    <div class=\"vue-color__c-hue__pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\n      <slot><div class=\"vue-color__c-hue__picker\"></div></slot>\n    </div>  \n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    class: ['vue-color__c-hue', directionClass]
+	  }, [_h('div', {
+	    ref: "container",
+	    staticClass: "vue-color__c-hue__container",
+	    on: {
+	      "mousedown": handleMouseDown,
+	      "touchmove": handleChange,
+	      "touchstart": handleChange
+	    }
+	  }, [_h('div', {
+	    staticClass: "vue-color__c-hue__pointer",
+	    style: ({
+	      top: pointerTop,
+	      left: pointerLeft
+	    })
+	  }, [_t("default", [_m(0)])])])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__c-hue__picker"
+	  })
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-9", module.exports)
+	  }
+	}
 
 /***/ },
 /* 29 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__slider\">\n  <div class=\"vue-color__slider__hue-warp\">\n    <hue v-model=\"colors\" @on-change=\"hueChange\"></hue>\n  </div>\n  <div class=\"vue-color__slider__swatches\">\n    <div class=\"vue-color__slider__swatch\" v-for=\"(offset, index) in swatches\" :data-index=\"index\"\n      @click=\"handleSwClick(index, offset)\">\n      <div class=\"vue-color__slider__swatch-picker\"\n      :class=\"{'vue-color__slider__swatch-picker--active': offset == activeOffset}\"\n      :style=\"{background: 'hsl(' + colors.hsl.h + ', 50%, ' + (offset * 100) + '%)'}\"\n      ></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__slider"
+	  }, [_h('div', {
+	    staticClass: "vue-color__slider__hue-warp"
+	  }, [_h('hue', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": hueChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__slider__swatches"
+	  }, [_l((swatches), function(offset, index) {
+	    return _h('div', {
+	      staticClass: "vue-color__slider__swatch",
+	      attrs: {
+	        "data-index": index
+	      },
+	      on: {
+	        "click": function($event) {
+	          handleSwClick(index, offset)
+	        }
+	      }
+	    }, [_h('div', {
+	      staticClass: "vue-color__slider__swatch-picker",
+	      class: {
+	        'vue-color__slider__swatch-picker--active': offset == activeOffset
+	      },
+	      style: ({
+	        background: 'hsl(' + colors.hsl.h + ', 50%, ' + (offset * 100) + '%)'
+	      })
+	    })])
+	  })])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-3", module.exports)
+	  }
+	}
 
 /***/ },
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(31)
-	__vue_script__ = __webpack_require__(33)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Swatches.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(35)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(33)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(35)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-656aace9/Swatches.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-4", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-4", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Swatches.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 31 */
@@ -2493,8 +2788,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Swatches.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Swatches.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Swatches.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Swatches.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2512,7 +2807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.vue-color__swatches__box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.vue-color__swatches__color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.vue-color__swatches__color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  border-radius: 2px 2px 0 0;\n}\n.vue-color__swatches__pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__swatches {\n  width: 320px;\n  height: 240px;\n  overflow-y: scroll;\n  background-color: #fff;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.16);\n}\n.vue-color__swatches__box {\n  padding: 16px 0 6px 16px;\n  overflow: hidden;\n}\n.vue-color__swatches__color-group {\n  padding-bottom: 10px;\n  width: 40px;\n  float: left;\n  margin-right: 10px;\n}\n.vue-color__swatches__color-it {\n  width: 40px;\n  height: 24px;\n  cursor: pointer;\n  background: #880e4f;\n  margin-bottom: 1px;\n  overflow: hidden;\n  -ms-border-radius: 2px 2px 0 0;\n  -moz-border-radius: 2px 2px 0 0;\n  -o-border-radius: 2px 2px 0 0;\n  -webkit-border-radius: 2px 2px 0 0;\n  border-radius: 2px 2px 0 0;\n}\n.vue-color__swatches__pick {\n  fill: #fff;\n  margin-left: 8px;\n  display: block;\n}\n", ""]);
 
 	// exports
 
@@ -2595,45 +2890,105 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 35 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__swatches\" :data-pick=\"pick\">\n  <div class=\"vue-color__swatches__box\">\n    <div class=\"vue-color__swatches__color-group\" v-for=\"group in defaultColors\">\n      <div class=\"vue-color__swatches__color-it\" v-for=\"c in group\"\n        :data-color=\"c\"\n        @click=\"handlerClick(c)\"\n        :style=\"{background: c}\">\n        <div class=\"vue-color__swatches__pick\" v-show=\"c == pick\">\n          <svg style=\"width: 24px; height:24px;\" viewBox=\"0 0 24 24\">\n            <path d=\"M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z\" />\n          </svg>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__swatches",
+	    attrs: {
+	      "data-pick": pick
+	    }
+	  }, [_h('div', {
+	    staticClass: "vue-color__swatches__box"
+	  }, [_l((defaultColors), function(group) {
+	    return _h('div', {
+	      staticClass: "vue-color__swatches__color-group"
+	    }, [_l((group), function(c) {
+	      return _h('div', {
+	        staticClass: "vue-color__swatches__color-it",
+	        style: ({
+	          background: c
+	        }),
+	        attrs: {
+	          "data-color": c
+	        },
+	        on: {
+	          "click": function($event) {
+	            handlerClick(c)
+	          }
+	        }
+	      }, [_h('div', {
+	        directives: [{
+	          name: "show",
+	          rawName: "v-show",
+	          value: (c == pick),
+	          expression: "c == pick"
+	        }],
+	        staticClass: "vue-color__swatches__pick"
+	      }, [_h('svg', {
+	        attrs: {
+	          "style": "width: 24px; height:24px;",
+	          "viewBox": "0 0 24 24"
+	        }
+	      }, [_h('path', {
+	        attrs: {
+	          "d": "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+	        }
+	      })])])])
+	    })])
+	  })])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-4", module.exports)
+	  }
+	}
 
 /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(37)
-	__vue_script__ = __webpack_require__(39)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Photoshop.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(56)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(39)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(56)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-32bdbe39/Photoshop.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-6", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-6", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Photoshop.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 37 */
@@ -2651,8 +3006,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Photoshop.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Photoshop.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Photoshop.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Photoshop.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2670,7 +3025,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-colors__photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.vue-colors__photoshop__head {\n  background-image: -webkit-linear-gradient(top, #f0f0f0 0%, #d4d4d4 100%);\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.vue-colors__photoshop__body {\n  padding: 15px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.vue-colors__photoshop__saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.vue-colors__photoshop__saturation-wrap .vue-color__saturation--circle {\n  width: 12px;\n  height: 12px;\n}\n.vue-colors__photoshop__hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.vue-colors__photoshop__hue-pointer {\n  position: relative;\n}\n.vue-colors__photoshop__hue-pointer--left,\n.vue-colors__photoshop__hue-pointer--right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.vue-colors__photoshop__hue-pointer--left:after,\n.vue-colors__photoshop__hue-pointer--right:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  -webkit-transform: translate(-8px, -5px);\n          transform: translate(-8px, -5px);\n}\n.vue-colors__photoshop__hue-pointer--left {\n  -webkit-transform: translate(-13px, -4px);\n          transform: translate(-13px, -4px);\n}\n.vue-colors__photoshop__hue-pointer--right {\n  -webkit-transform: translate(20px, -4px) rotate(180deg);\n          transform: translate(20px, -4px) rotate(180deg);\n}\n.vue-colors__photoshop__controls {\n  width: 180px;\n  margin-left: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.vue-colors__photoshop__actions {\n  margin-left: 20px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vue-colors__photoshop__ac-btn {\n  cursor: pointer;\n  background-image: -webkit-linear-gradient(top, #fff 0%, #e6e6e6 100%);\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.vue-colors__photoshop__previews {\n  width: 60px;\n}\n.vue-colors__photoshop__previews__swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.vue-colors__photoshop__previews__pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.vue-colors__photoshop__previews__label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.vue-colors__photoshop__fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.vue-colors__photoshop__fields .vue-color__editable-input__input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.vue-colors__photoshop__fields .vue-color__editable-input__label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.vue-colors__photoshop__fields__divider {\n  height: 5px;\n}\n.vue-colors__photoshop__fields__hex .vue-color__editable-input__input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.vue-colors__photoshop__fields__hex .vue-color__editable-input__label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-colors__photoshop {\n  background: #dcdcdc;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 8px 16px rgba(0,0,0,0.15);\n  box-sizing: initial;\n  width: 513px;\n  font-family: Roboto;\n}\n.vue-colors__photoshop__head {\n  background-image: linear-gradient(-180deg, #f0f0f0 0%, #d4d4d4 100%);\n  border-bottom: 1px solid #b1b1b1;\n  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.2), inset 0 -1px 0 0 rgba(0,0,0,0.02);\n  height: 23px;\n  line-height: 24px;\n  border-radius: 4px 4px 0 0;\n  font-size: 13px;\n  color: #4d4d4d;\n  text-align: center;\n}\n.vue-colors__photoshop__body {\n  padding: 15px;\n  display: flex;\n}\n.vue-colors__photoshop__saturation-wrap {\n  width: 256px;\n  height: 256px;\n  position: relative;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n  overflow: hidden;\n}\n.vue-colors__photoshop__saturation-wrap .vue-color__saturation--circle {\n  width: 12px;\n  height: 12px;\n}\n.vue-colors__photoshop__hue-wrap {\n  position: relative;\n  height: 256px;\n  width: 19px;\n  margin-left: 10px;\n  border: 2px solid #b3b3b3;\n  border-bottom: 2px solid #f0f0f0;\n}\n.vue-colors__photoshop__hue-pointer {\n  position: relative;\n}\n.vue-colors__photoshop__hue-pointer--left,\n.vue-colors__photoshop__hue-pointer--right {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 5px 0 5px 8px;\n  border-color: transparent transparent transparent #555;\n}\n.vue-colors__photoshop__hue-pointer--left:after,\n.vue-colors__photoshop__hue-pointer--right:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-style: solid;\n  border-width: 4px 0 4px 6px;\n  border-color: transparent transparent transparent #fff;\n  position: absolute;\n  top: 1px;\n  left: 1px;\n  transform: translate(-8px, -5px);\n}\n.vue-colors__photoshop__hue-pointer--left {\n  transform: translate(-13px, -4px);\n}\n.vue-colors__photoshop__hue-pointer--right {\n  transform: translate(20px, -4px) rotate(180deg);\n}\n.vue-colors__photoshop__controls {\n  width: 180px;\n  margin-left: 10px;\n  display: flex;\n}\n.vue-colors__photoshop__actions {\n  margin-left: 20px;\n  flex: 1;\n}\n.vue-colors__photoshop__ac-btn {\n  cursor: pointer;\n  background-image: linear-gradient(-180deg, #fff 0%, #e6e6e6 100%);\n  border: 1px solid #878787;\n  border-radius: 2px;\n  height: 20px;\n  box-shadow: 0 1px 0 0 #eaeaea;\n  font-size: 14px;\n  color: #000;\n  line-height: 20px;\n  text-align: center;\n  margin-bottom: 10px;\n}\n.vue-colors__photoshop__previews {\n  width: 60px;\n}\n.vue-colors__photoshop__previews__swatches {\n  border: 1px solid #b3b3b3;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 2px;\n  margin-top: 1px;\n}\n.vue-colors__photoshop__previews__pr-color {\n  height: 34px;\n  box-shadow: inset 1px 0 0 #000, inset -1px 0 0 #000, inset 0 1px 0 #000;\n}\n.vue-colors__photoshop__previews__label {\n  font-size: 14px;\n  color: #000;\n  text-align: center;\n}\n.vue-colors__photoshop__fields {\n  padding-top: 5px;\n  padding-bottom: 9px;\n  width: 80px;\n  position: relative;\n}\n.vue-colors__photoshop__fields .vue-color__editable-input__input {\n  margin-left: 40%;\n  width: 40%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 5px;\n  font-size: 13px;\n  padding-left: 3px;\n  margin-right: 10px;\n}\n.vue-colors__photoshop__fields .vue-color__editable-input__label {\n  top: 0;\n  left: 0;\n  width: 34px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n  position: absolute;\n}\n.vue-colors__photoshop__fields__divider {\n  height: 5px;\n}\n.vue-colors__photoshop__fields__hex .vue-color__editable-input__input {\n  margin-left: 20%;\n  width: 80%;\n  height: 18px;\n  border: 1px solid #888;\n  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 0 #ececec;\n  margin-bottom: 6px;\n  font-size: 13px;\n  padding-left: 3px;\n}\n.vue-colors__photoshop__fields__hex .vue-color__editable-input__label {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 14px;\n  text-transform: uppercase;\n  font-size: 13px;\n  height: 18px;\n  line-height: 22px;\n}\n", ""]);
 
 	// exports
 
@@ -2768,37 +3123,46 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(41)
-	__vue_script__ = __webpack_require__(43)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/common/Saturation.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(45)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(43)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(45)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-04f3fcc7/Saturation.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-10", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-10", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Saturation.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 41 */
@@ -2816,8 +3180,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Saturation.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Saturation.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-10!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Saturation.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-10!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Saturation.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2835,7 +3199,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__saturation,\n.vue-color__saturation--white,\n.vue-color__saturation--black {\n  cursor: pointer;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.vue-color__saturation--white {\n  background: -webkit-linear-gradient(left, #fff, rgba(255,255,255,0));\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.vue-color__saturation--black {\n  background: -webkit-linear-gradient(bottom, #000, rgba(0,0,0,0));\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.vue-color__saturation--pointer {\n  cursor: pointer;\n  position: absolute;\n}\n.vue-color__saturation--circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  -webkit-transform: translate(-2px, -2px);\n          transform: translate(-2px, -2px);\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__saturation,\n.vue-color__saturation--white,\n.vue-color__saturation--black {\n  cursor: pointer;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.vue-color__saturation--white {\n  background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n}\n.vue-color__saturation--black {\n  background: linear-gradient(to top, #000, rgba(0,0,0,0));\n}\n.vue-color__saturation--pointer {\n  cursor: pointer;\n  position: absolute;\n}\n.vue-color__saturation--circle {\n  cursor: head;\n  width: 4px;\n  height: 4px;\n  box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,0.3), 0 0 1px 2px rgba(0,0,0,0.4);\n  border-radius: 50%;\n  transform: translate(-2px, -2px);\n}\n", ""]);
 
 	// exports
 
@@ -3374,45 +3738,89 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 45 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__saturation\" \n  :style=\"{background: bgColor}\"\n  ref=\"container\"\n  @mousedown=\"handleMouseDown\">\n  <div class=\"vue-color__saturation--white\"></div>\n  <div class=\"vue-color__saturation--black\"></div>\n  <div class=\"vue-color__saturation--pointer\" :style=\"{top: pointerTop, left: pointerLeft}\">\n    <slot><div class=\"vue-color__saturation--circle\"></div></slot>\n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    ref: "container",
+	    staticClass: "vue-color__saturation",
+	    style: ({
+	      background: bgColor
+	    }),
+	    on: {
+	      "mousedown": handleMouseDown
+	    }
+	  }, [_m(0), " ", _m(1), " ", _h('div', {
+	    staticClass: "vue-color__saturation--pointer",
+	    style: ({
+	      top: pointerTop,
+	      left: pointerLeft
+	    })
+	  }, [_t("default", [_m(2)])])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__saturation--white"
+	  })
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__saturation--black"
+	  })
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__saturation--circle"
+	  })
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-10", module.exports)
+	  }
+	}
 
 /***/ },
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(47)
-	__vue_script__ = __webpack_require__(49)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/common/Alpha.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(55)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(49)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(55)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-9c7bd10e/Alpha.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-11", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-11", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Alpha.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 47 */
@@ -3430,8 +3838,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Alpha.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Alpha.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-11!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Alpha.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-11!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Alpha.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3449,7 +3857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.vue-color__c-alpha__checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.vue-color__c-alpha__gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.vue-color__c-alpha__container {\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.vue-color__c-alpha__pointer {\n  z-index: 2;\n  position: absolute;\n}\n.vue-color__c-alpha__picker {\n  cursor: pointer;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  -webkit-transform: translateX(-2px);\n          transform: translateX(-2px);\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__c-alpha {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.vue-color__c-alpha__checkboard-wrap {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  overflow: hidden;\n}\n.vue-color__c-alpha__gradient {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n.vue-color__c-alpha__container {\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n  height: 100%;\n  margin: 0 3px;\n}\n.vue-color__c-alpha__pointer {\n  z-index: 2;\n  position: absolute;\n}\n.vue-color__c-alpha__picker {\n  cursor: pointer;\n  width: 4px;\n  border-radius: 1px;\n  height: 8px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.6);\n  background: #fff;\n  margin-top: 1px;\n  transform: translateX(-2px);\n}\n", ""]);
 
 	// exports
 
@@ -3533,37 +3941,46 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(51)
-	__vue_script__ = __webpack_require__(53)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/common/Checkboard.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(54)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(53)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(54)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8528ec5a/Checkboard.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-12", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-12", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Checkboard.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 51 */
@@ -3581,8 +3998,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Checkboard.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Checkboard.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-12!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Checkboard.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-12!./../../../node_modules/stylus-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Checkboard.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3600,7 +4017,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__c-checkerboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__c-checkerboard {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n", ""]);
 
 	// exports
 
@@ -3614,6 +4031,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
 
 	var _checkboardCache = {};
 
@@ -3675,57 +4093,354 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 54 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__c-checkerboard\" :style=\"{background: bgStyle}\"></div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__c-checkerboard",
+	    style: ({
+	      background: bgStyle
+	    })
+	  })
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-12", module.exports)
+	  }
+	}
 
 /***/ },
 /* 55 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__c-alpha\">\n  <div class=\"vue-color__c-alpha__checkboard-wrap\">\n    <checkboard></checkboard>\n  </div>\n  <div class=\"vue-color__c-alpha__gradient\" :style=\"{background: gradientColor}\"></div>\n  <div class=\"vue-color__c-alpha__container\" ref=\"container\"\n      @mousedown=\"handleMouseDown\"\n      @touchmove=\"handleChange\"\n      @touchstart=\"handleChange\">\n    <div class=\"vue-color__c-alpha__pointer\" :style=\"{left: colors.a * 100 + '%'}\">\n      <slot><div class=\"vue-color__c-alpha__picker\"></div></slot>\n    </div>\n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__c-alpha"
+	  }, [_h('div', {
+	    staticClass: "vue-color__c-alpha__checkboard-wrap"
+	  }, [_h('checkboard')]), " ", _h('div', {
+	    staticClass: "vue-color__c-alpha__gradient",
+	    style: ({
+	      background: gradientColor
+	    })
+	  }), " ", _h('div', {
+	    ref: "container",
+	    staticClass: "vue-color__c-alpha__container",
+	    on: {
+	      "mousedown": handleMouseDown,
+	      "touchmove": handleChange,
+	      "touchstart": handleChange
+	    }
+	  }, [_h('div', {
+	    staticClass: "vue-color__c-alpha__pointer",
+	    style: ({
+	      left: colors.a * 100 + '%'
+	    })
+	  }, [_t("default", [_m(0)])])])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__c-alpha__picker"
+	  })
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-11", module.exports)
+	  }
+	}
 
 /***/ },
 /* 56 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-colors__photoshop\">\n  <div class=\"vue-colors__photoshop__head\">{{head}}</div>\n  <div class=\"vue-colors__photoshop__body\">\n    <div class=\"vue-colors__photoshop__saturation-wrap\">\n      <saturation v-model=\"colors\" @on-change=\"childChange\"></saturation>\n    </div>\n    <div class=\"vue-colors__photoshop__hue-wrap\">\n      <hue v-model=\"colors\" @on-change=\"childChange\" direction=\"vertical\">\n        <div class=\"vue-colors__photoshop__hue-pointer\">\n          <i class=\"vue-colors__photoshop__hue-pointer--left\"></i><i class=\"vue-colors__photoshop__hue-pointer--right\"></i>\n        </div>\n      </hue>\n    </div>\n    <div class=\"vue-colors__photoshop__controls\">\n      <div class=\"vue-colors__photoshop__previews\">\n        <div class=\"vue-colors__photoshop__previews__label\">new</div>\n        <div class=\"vue-colors__photoshop__previews__swatches\">\n          <div class=\"vue-colors__photoshop__previews__pr-color\" :style=\"{background: colors.hex}\"></div>\n          <div class=\"vue-colors__photoshop__previews__pr-color\" :style=\"{background: currentColor}\"></div>\n        </div>\n        <div class=\"vue-colors__photoshop__previews__label\">current</div>\n      </div>\n      <div class=\"vue-colors__photoshop__actions\">\n        <div class=\"vue-colors__photoshop__ac-btn\" @click=\"handleAccept\">OK</div>\n        <div class=\"vue-colors__photoshop__ac-btn\" @click=\"handleCancel\">Cancel</div>\n        <div class=\"vue-colors__photoshop__fields\">\n          <!-- hsla -->\n          <ed-in label=\"h\" v-model=\"colors.hsl.h\" @on-change=\"inputChange\"></ed-in>\n          <ed-in label=\"s\" v-model=\"colors.hsl.s\" @on-change=\"inputChange\"></ed-in>\n          <ed-in label=\"v\" v-model=\"colors.hsl.l\" @on-change=\"inputChange\"></ed-in>\n          <div class=\"vue-colors__photoshop__fields__divider\"></div>\n          <!-- rgba -->\n          <ed-in label=\"r\" v-model=\"colors.rgba.r\" @on-change=\"inputChange\"></ed-in>\n          <ed-in label=\"g\" v-model=\"colors.rgba.g\" @on-change=\"inputChange\"></ed-in>\n          <ed-in label=\"b\" v-model=\"colors.rgba.b\" @on-change=\"inputChange\"></ed-in>\n          <div class=\"vue-colors__photoshop__fields__divider\"></div>\n          <!-- hex -->\n          <ed-in label=\"#\" class=\"vue-colors__photoshop__fields__hex\" v-model=\"colors.hex\" @on-change=\"inputChange\"></ed-in>\n        </div>\n\n      </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-colors__photoshop"
+	  }, [_h('div', {
+	    staticClass: "vue-colors__photoshop__head"
+	  }, [_s(head)]), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__body"
+	  }, [_h('div', {
+	    staticClass: "vue-colors__photoshop__saturation-wrap"
+	  }, [_h('saturation', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__hue-wrap"
+	  }, [_h('hue', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    attrs: {
+	      "direction": "vertical"
+	    },
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  }, [_m(0)])]), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__controls"
+	  }, [_h('div', {
+	    staticClass: "vue-colors__photoshop__previews"
+	  }, [_m(1), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__previews__swatches"
+	  }, [_h('div', {
+	    staticClass: "vue-colors__photoshop__previews__pr-color",
+	    style: ({
+	      background: colors.hex
+	    })
+	  }), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__previews__pr-color",
+	    style: ({
+	      background: currentColor
+	    })
+	  })]), " ", _m(2)]), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__actions"
+	  }, [_h('div', {
+	    staticClass: "vue-colors__photoshop__ac-btn",
+	    on: {
+	      "click": handleAccept
+	    }
+	  }, ["OK"]), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__ac-btn",
+	    on: {
+	      "click": handleCancel
+	    }
+	  }, ["Cancel"]), " ", _h('div', {
+	    staticClass: "vue-colors__photoshop__fields"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hsl.h),
+	      expression: "colors.hsl.h"
+	    }],
+	    attrs: {
+	      "label": "h"
+	    },
+	    domProps: {
+	      "value": (colors.hsl.h)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hsl.h = $event
+	      }
+	    }
+	  }), " ", _h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hsl.s),
+	      expression: "colors.hsl.s"
+	    }],
+	    attrs: {
+	      "label": "s"
+	    },
+	    domProps: {
+	      "value": (colors.hsl.s)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hsl.s = $event
+	      }
+	    }
+	  }), " ", _h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hsl.l),
+	      expression: "colors.hsl.l"
+	    }],
+	    attrs: {
+	      "label": "v"
+	    },
+	    domProps: {
+	      "value": (colors.hsl.l)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hsl.l = $event
+	      }
+	    }
+	  }), " ", _m(3), " ", " ", _h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.r),
+	      expression: "colors.rgba.r"
+	    }],
+	    attrs: {
+	      "label": "r"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.r)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.r = $event
+	      }
+	    }
+	  }), " ", _h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.g),
+	      expression: "colors.rgba.g"
+	    }],
+	    attrs: {
+	      "label": "g"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.g)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.g = $event
+	      }
+	    }
+	  }), " ", _h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.b),
+	      expression: "colors.rgba.b"
+	    }],
+	    attrs: {
+	      "label": "b"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.b)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.b = $event
+	      }
+	    }
+	  }), " ", _m(4), " ", " ", _h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hex),
+	      expression: "colors.hex"
+	    }],
+	    staticClass: "vue-colors__photoshop__fields__hex",
+	    attrs: {
+	      "label": "#"
+	    },
+	    domProps: {
+	      "value": (colors.hex)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hex = $event
+	      }
+	    }
+	  })])])])])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-colors__photoshop__hue-pointer"
+	  }, [_h('i', {
+	    staticClass: "vue-colors__photoshop__hue-pointer--left"
+	  }), _h('i', {
+	    staticClass: "vue-colors__photoshop__hue-pointer--right"
+	  })])
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-colors__photoshop__previews__label"
+	  }, ["new"])
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-colors__photoshop__previews__label"
+	  }, ["current"])
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-colors__photoshop__fields__divider"
+	  })
+	}},function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-colors__photoshop__fields__divider"
+	  })
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-6", module.exports)
+	  }
+	}
 
 /***/ },
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(58)
-	__vue_script__ = __webpack_require__(60)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Sketch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(61)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(60)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(61)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1036f36b/Sketch.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-5", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-5", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Sketch.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 58 */
@@ -3743,8 +4458,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Sketch.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Sketch.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Sketch.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-5!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Sketch.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3762,7 +4477,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.vue-color__sketch__saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.vue-color__sketch__controls {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.vue-color__sketch__sliders {\n  padding: 4px 0;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vue-color__sketch__sliders .vue-color__c-hue,\n.vue-color__sketch__sliders .vue-color__c-alpha__gradient {\n  border-radius: 2px;\n}\n.vue-color__sketch__hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.vue-color__sketch__alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.vue-color__sketch__color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.vue-color__sketch__active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.vue-color__sketch__field {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 4px;\n}\n.vue-color__sketch__field .vue-color__editable-input__input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.vue-color__sketch__field .vue-color__editable-input__label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.vue-color__sketch__field--single {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  padding-left: 6px;\n}\n.vue-color__sketch__field--double {\n  -webkit-box-flex: 2;\n      -ms-flex: 2;\n          flex: 2;\n}\n.vue-color__sketch__presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.vue-color__sketch__presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__sketch {\n  position: relative;\n  width: 200px;\n  padding: 10px 10px 0;\n  box-sizing: initial;\n  background: #fff;\n  border-radius: 4px;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.15);\n}\n.vue-color__sketch__saturation-wrap {\n  width: 100%;\n  padding-bottom: 75%;\n  position: relative;\n  overflow: hidden;\n}\n.vue-color__sketch__controls {\n  display: flex;\n}\n.vue-color__sketch__sliders {\n  padding: 4px 0;\n  flex: 1;\n}\n.vue-color__sketch__sliders .vue-color__c-hue,\n.vue-color__sketch__sliders .vue-color__c-alpha__gradient {\n  border-radius: 2px;\n}\n.vue-color__sketch__hue-wrap {\n  position: relative;\n  height: 10px;\n}\n.vue-color__sketch__alpha-wrap {\n  position: relative;\n  height: 10px;\n  margin-top: 4px;\n  overflow: hidden;\n}\n.vue-color__sketch__color-wrap {\n  width: 24px;\n  height: 24px;\n  position: relative;\n  margin-top: 4px;\n  margin-left: 4px;\n  border-radius: 3px;\n}\n.vue-color__sketch__active-color {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 2px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 0 4px rgba(0,0,0,0.25);\n  z-index: 2;\n}\n.vue-color__sketch__field {\n  display: flex;\n  padding-top: 4px;\n}\n.vue-color__sketch__field .vue-color__editable-input__input {\n  width: 80%;\n  padding: 4px 10% 3px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #ccc;\n  font-size: 11px;\n}\n.vue-color__sketch__field .vue-color__editable-input__label {\n  display: block;\n  text-align: center;\n  font-size: 11px;\n  color: #222;\n  padding-top: 3px;\n  padding-bottom: 4px;\n  text-transform: capitalize;\n}\n.vue-color__sketch__field--single {\n  flex: 1;\n  padding-left: 6px;\n}\n.vue-color__sketch__field--double {\n  flex: 2;\n}\n.vue-color__sketch__presets {\n  margin-right: -10px;\n  margin-left: -10px;\n  padding-left: 10px;\n  padding-top: 10px;\n  border-top: 1px solid #eee;\n}\n.vue-color__sketch__presets-color {\n  border-radius: 3px;\n  overflow: hidden;\n  position: relative;\n  display: inline-block;\n  margin: 0 10px 10px 0;\n  vertical-align: top;\n  cursor: pointer;\n  width: 16px;\n  height: 16px;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);\n}\n", ""]);
 
 	// exports
 
@@ -3856,45 +4571,252 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 61 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__sketch\">\n  <div class=\"vue-color__sketch__saturation-wrap\">\n    <saturation v-model=\"colors\" @on-change=\"childChange\"></saturation>\n  </div>\n  <div class=\"vue-color__sketch__controls\">\n    <div class=\"vue-color__sketch__sliders\">\n      <div class=\"vue-color__sketch__hue-wrap\">\n        <hue v-model=\"colors\" @on-change=\"childChange\"></hue>  \n      </div>\n      <div class=\"vue-color__sketch__alpha-wrap\">\n        <alpha v-model=\"colors\" @on-change=\"childChange\"></alpha>\n      </div>\n    </div>\n    <div class=\"vue-color__sketch__color-wrap\">\n      <div class=\"vue-color__sketch__active-color\" :style=\"{background: activeColor}\"></div>\n    </div>\n  </div>\n  <div class=\"vue-color__sketch__field\">\n    <!-- rgba -->\n    <div class=\"vue-color__sketch__field--double\">\n      <ed-in label=\"hex\" v-model=\"colors.hex\" @on-change=\"inputChange\"></ed-in>  \n    </div>\n    <div class=\"vue-color__sketch__field--single\">\n      <ed-in label=\"r\" v-model=\"colors.rgba.r\" @on-change=\"inputChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__sketch__field--single\">\n      <ed-in label=\"g\" v-model=\"colors.rgba.g\" @on-change=\"inputChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__sketch__field--single\">\n      <ed-in label=\"b\" v-model=\"colors.rgba.b\" @on-change=\"inputChange\"></ed-in>\n    </div>\n    <div class=\"vue-color__sketch__field--single\">\n      <ed-in label=\"a\" v-model=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\" @on-change=\"inputChange\"></ed-in>\n    </div>\n  </div>\n  <div class=\"vue-color__sketch__presets\">\n    <div class=\"vue-color__sketch__presets-color\"\n      v-for=\"c in presetColors\"\n      :style=\"{background: c}\"\n      @click=\"handlePreset(c)\">\n    </div>\n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__sketch"
+	  }, [_h('div', {
+	    staticClass: "vue-color__sketch__saturation-wrap"
+	  }, [_h('saturation', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__controls"
+	  }, [_h('div', {
+	    staticClass: "vue-color__sketch__sliders"
+	  }, [_h('div', {
+	    staticClass: "vue-color__sketch__hue-wrap"
+	  }, [_h('hue', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__alpha-wrap"
+	  }, [_h('alpha', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })])]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__color-wrap"
+	  }, [_h('div', {
+	    staticClass: "vue-color__sketch__active-color",
+	    style: ({
+	      background: activeColor
+	    })
+	  })])]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__field"
+	  }, [_h('div', {
+	    staticClass: "vue-color__sketch__field--double"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hex),
+	      expression: "colors.hex"
+	    }],
+	    attrs: {
+	      "label": "hex"
+	    },
+	    domProps: {
+	      "value": (colors.hex)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hex = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__field--single"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.r),
+	      expression: "colors.rgba.r"
+	    }],
+	    attrs: {
+	      "label": "r"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.r)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.r = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__field--single"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.g),
+	      expression: "colors.rgba.g"
+	    }],
+	    attrs: {
+	      "label": "g"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.g)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.g = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__field--single"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.b),
+	      expression: "colors.rgba.b"
+	    }],
+	    attrs: {
+	      "label": "b"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.b)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.b = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__field--single"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.a),
+	      expression: "colors.a"
+	    }],
+	    attrs: {
+	      "label": "a",
+	      "arrow-offset": 0.01,
+	      "max": 1
+	    },
+	    domProps: {
+	      "value": (colors.a)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.a = $event
+	      }
+	    }
+	  })])]), " ", _h('div', {
+	    staticClass: "vue-color__sketch__presets"
+	  }, [_l((presetColors), function(c) {
+	    return _h('div', {
+	      staticClass: "vue-color__sketch__presets-color",
+	      style: ({
+	        background: c
+	      }),
+	      on: {
+	        "click": function($event) {
+	          handlePreset(c)
+	        }
+	      }
+	    })
+	  })])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-5", module.exports)
+	  }
+	}
 
 /***/ },
 /* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
+	var __vue_exports__, __vue_options__
+
+	/* styles */
 	__webpack_require__(63)
-	__vue_script__ = __webpack_require__(65)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/components/Chrome.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(66)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(65)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(66)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5da8e339/Chrome.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-7", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-7", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] Chrome.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 63 */
@@ -3912,8 +4834,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Chrome.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Chrome.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-7!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Chrome.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-7!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Chrome.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3931,7 +4853,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".vue-color__chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.vue-color__chrome__controls {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.vue-color__chrome__color-wrap {\n  width: 32px;\n}\n.vue-color__chrome__active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.vue-color__chrome__sliders {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vue-color__chrome__sliders .vue-color__c-hue,\n.vue-color__chrome__sliders .vue-color__c-alpha__gradient {\n  border-radius: 2px;\n}\n.vue-color__chrome__sliders .vue-color__c-alpha__picker,\n.vue-color__chrome__sliders .vue-color__c-hue__picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  -webkit-transform: translate(-6px, -2px);\n          transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.vue-color__chrome__fields-wrap {\n  padding-top: 16px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.vue-color__chrome__fields {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-left: -6px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vue-color__chrome__field {\n  padding-left: 6px;\n  width: 100%;\n}\n.vue-color__chrome__toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.vue-color__chrome__icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.vue-color__chrome__icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.vue-color__chrome__hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.vue-color__chrome__alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.vue-color__chrome__chrome-body {\n  padding: 16px 16px 12px;\n}\n.vue-color__chrome__saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.vue-color__chrome__saturation-wrap .vue-color__saturation--circle {\n  width: 12px;\n  height: 12px;\n}\n.vue-color__chrome__fields .vue-color__editable-input__input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.vue-color__chrome__fields .vue-color__editable-input__label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n", ""]);
+	exports.push([module.id, "\n.vue-color__chrome {\n  background: #fff;\n  border-radius: 2px;\n  box-shadow: 0 0 2px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.3);\n  box-sizing: initial;\n  width: 225px;\n  font-family: Menlo;\n}\n.vue-color__chrome__controls {\n  display: flex;\n}\n.vue-color__chrome__color-wrap {\n  width: 32px;\n}\n.vue-color__chrome__active-color {\n  margin-top: 6px;\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n.vue-color__chrome__sliders {\n  flex: 1;\n}\n.vue-color__chrome__sliders .vue-color__c-hue,\n.vue-color__chrome__sliders .vue-color__c-alpha__gradient {\n  border-radius: 2px;\n}\n.vue-color__chrome__sliders .vue-color__c-alpha__picker,\n.vue-color__chrome__sliders .vue-color__c-hue__picker {\n  width: 12px;\n  height: 12px;\n  border-radius: 6px;\n  transform: translate(-6px, -2px);\n  background-color: #f8f8f8;\n  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);\n}\n.vue-color__chrome__fields-wrap {\n  padding-top: 16px;\n  display: flex;\n}\n.vue-color__chrome__fields {\n  display: flex;\n  margin-left: -6px;\n  flex: 1;\n}\n.vue-color__chrome__field {\n  padding-left: 6px;\n  width: 100%;\n}\n.vue-color__chrome__toggle-btn {\n  width: 32px;\n  text-align: right;\n  position: relative;\n}\n.vue-color__chrome__icon {\n  margin-right: -4px;\n  margin-top: 12px;\n  cursor: pointer;\n  position: relative;\n  z-index: 2;\n}\n.vue-color__chrome__icon-highlight {\n  position: absolute;\n  width: 24px;\n  height: 28px;\n  background: #eee;\n  border-radius: 4px;\n  top: 10px;\n  left: 12px;\n}\n.vue-color__chrome__hue-wrap {\n  position: relative;\n  height: 10px;\n  margin-bottom: 8px;\n}\n.vue-color__chrome__alpha-wrap {\n  position: relative;\n  height: 10px;\n}\n.vue-color__chrome__chrome-body {\n  padding: 16px 16px 12px;\n}\n.vue-color__chrome__saturation-wrap {\n  width: 100%;\n  padding-bottom: 55%;\n  position: relative;\n  border-radius: 2px 2px 0 0;\n  overflow: hidden;\n}\n.vue-color__chrome__saturation-wrap .vue-color__saturation--circle {\n  width: 12px;\n  height: 12px;\n}\n.vue-color__chrome__fields .vue-color__editable-input__input {\n  font-size: 11px;\n  color: #333;\n  width: 100%;\n  border-rradius: 2px;\n  border: none;\n  box-shadow: inset 0 0 0 1px #dadada;\n  height: 21px;\n  text-align: center;\n}\n.vue-color__chrome__fields .vue-color__editable-input__label {\n  text-transform: uppercase;\n  font-size: 11px;\n  line-height: 11px;\n  color: #969696;\n  text-align: center;\n  display: block;\n  margin-top: 12px;\n}\n", ""]);
 
 	// exports
 
@@ -4039,9 +4961,335 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 66 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"vue-color__chrome\">\n  <div class=\"vue-color__chrome__saturation-wrap\">\n    <saturation v-model=\"colors\" @on-change=\"childChange\"></saturation>\n  </div>\n  <div class=\"vue-color__chrome__chrome-body\">\n    <div class=\"vue-color__chrome__controls\">\n      <div class=\"vue-color__chrome__color-wrap\">\n        <div class=\"vue-color__chrome__active-color\" :style=\"{background: activeColor}\"></div>\n      </div>\n\n      <div class=\"vue-color__chrome__sliders\">\n        <div class=\"vue-color__chrome__hue-wrap\">\n          <hue v-model=\"colors\" @on-change=\"childChange\"></hue>\n        </div>\n        <div class=\"vue-color__chrome__alpha-wrap\">\n          <alpha v-model=\"colors\" @on-change=\"childChange\"></alpha>\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"vue-color__chrome__fields-wrap\">\n      <div class=\"vue-color__chrome__fields\" v-show=\"fieldsIndex === 0\">\n        <!-- hex -->\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"hex\" v-model=\"colors.hex\" @on-change=\"inputChange\"></ed-in>  \n        </div>\n      </div>\n      <div class=\"vue-color__chrome__fields\" v-show=\"fieldsIndex === 1\">\n        <!-- rgba -->\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"r\" v-model=\"colors.rgba.r\" @on-change=\"inputChange\"></ed-in>\n        </div>\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"g\" v-model=\"colors.rgba.g\" @on-change=\"inputChange\"></ed-in>\n        </div>\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"b\" v-model=\"colors.rgba.b\" @on-change=\"inputChange\"></ed-in>\n        </div>\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"a\" v-model=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\" @on-change=\"inputChange\"></ed-in>\n        </div>\n      </div>\n      <div class=\"vue-color__chrome__fields\" v-show=\"fieldsIndex === 2\">\n        <!-- hsla -->\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"h\" v-model=\"colors.hsl.h\" @on-change=\"inputChange\"></ed-in>\n        </div>\n        <div class=\"vue-color__chrome__field\"> \n          <ed-in label=\"s\" v-model=\"colors.hsl.s\" @on-change=\"inputChange\"></ed-in>\n        </div>\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"l\" v-model=\"colors.hsl.l\" @on-change=\"inputChange\"></ed-in>\n        </div>\n        <div class=\"vue-color__chrome__field\">\n          <ed-in label=\"a\" v-model=\"colors.a\" :arrow-offset=\"0.01\" :max=\"1\" @on-change=\"inputChange\"></ed-in>\n        </div>\n      </div>\n      <!-- btn -->\n      <div class=\"vue-color__chrome__toggle-btn\" @click=\"toggleViews\">\n        <div class=\"vue-color__chrome__icon\">\n          <svg style=\"width:24px; height:24px\" viewBox=\"0 0 24 24\" \n            @mouseover=\"showHighlight\" \n            @mouseenter=\"showHighlight\" \n            @mouseout=\"hideHighlight\">\n            <path fill=\"#333\" d=\"M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z\" />\n          </svg>\n        </div>\n        <div class=\"vue-color__chrome__icon-highlight\" v-show=\"highlight\"></div>\n      </div>\n      <!-- btn -->\n    </div>      \n  </div>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "vue-color__chrome"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__saturation-wrap"
+	  }, [_h('saturation', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__chrome-body"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__controls"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__color-wrap"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__active-color",
+	    style: ({
+	      background: activeColor
+	    })
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__sliders"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__hue-wrap"
+	  }, [_h('hue', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__alpha-wrap"
+	  }, [_h('alpha', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors),
+	      expression: "colors"
+	    }],
+	    domProps: {
+	      "value": (colors)
+	    },
+	    on: {
+	      "on-change": childChange,
+	      "input": function($event) {
+	        colors = $event
+	      }
+	    }
+	  })])])]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__fields-wrap"
+	  }, [_h('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (fieldsIndex === 0),
+	      expression: "fieldsIndex === 0"
+	    }],
+	    staticClass: "vue-color__chrome__fields"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hex),
+	      expression: "colors.hex"
+	    }],
+	    attrs: {
+	      "label": "hex"
+	    },
+	    domProps: {
+	      "value": (colors.hex)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hex = $event
+	      }
+	    }
+	  })])]), " ", _h('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (fieldsIndex === 1),
+	      expression: "fieldsIndex === 1"
+	    }],
+	    staticClass: "vue-color__chrome__fields"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.r),
+	      expression: "colors.rgba.r"
+	    }],
+	    attrs: {
+	      "label": "r"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.r)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.r = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.g),
+	      expression: "colors.rgba.g"
+	    }],
+	    attrs: {
+	      "label": "g"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.g)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.g = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.rgba.b),
+	      expression: "colors.rgba.b"
+	    }],
+	    attrs: {
+	      "label": "b"
+	    },
+	    domProps: {
+	      "value": (colors.rgba.b)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.rgba.b = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.a),
+	      expression: "colors.a"
+	    }],
+	    attrs: {
+	      "label": "a",
+	      "arrow-offset": 0.01,
+	      "max": 1
+	    },
+	    domProps: {
+	      "value": (colors.a)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.a = $event
+	      }
+	    }
+	  })])]), " ", _h('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (fieldsIndex === 2),
+	      expression: "fieldsIndex === 2"
+	    }],
+	    staticClass: "vue-color__chrome__fields"
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hsl.h),
+	      expression: "colors.hsl.h"
+	    }],
+	    attrs: {
+	      "label": "h"
+	    },
+	    domProps: {
+	      "value": (colors.hsl.h)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hsl.h = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hsl.s),
+	      expression: "colors.hsl.s"
+	    }],
+	    attrs: {
+	      "label": "s"
+	    },
+	    domProps: {
+	      "value": (colors.hsl.s)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hsl.s = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.hsl.l),
+	      expression: "colors.hsl.l"
+	    }],
+	    attrs: {
+	      "label": "l"
+	    },
+	    domProps: {
+	      "value": (colors.hsl.l)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.hsl.l = $event
+	      }
+	    }
+	  })]), " ", _h('div', {
+	    staticClass: "vue-color__chrome__field"
+	  }, [_h('ed-in', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (colors.a),
+	      expression: "colors.a"
+	    }],
+	    attrs: {
+	      "label": "a",
+	      "arrow-offset": 0.01,
+	      "max": 1
+	    },
+	    domProps: {
+	      "value": (colors.a)
+	    },
+	    on: {
+	      "on-change": inputChange,
+	      "input": function($event) {
+	        colors.a = $event
+	      }
+	    }
+	  })])]), " ", " ", _h('div', {
+	    staticClass: "vue-color__chrome__toggle-btn",
+	    on: {
+	      "click": toggleViews
+	    }
+	  }, [_h('div', {
+	    staticClass: "vue-color__chrome__icon"
+	  }, [_h('svg', {
+	    attrs: {
+	      "style": "width:24px; height:24px",
+	      "viewBox": "0 0 24 24"
+	    },
+	    on: {
+	      "mouseover": showHighlight,
+	      "mouseenter": showHighlight,
+	      "mouseout": hideHighlight
+	    }
+	  }, [_h('path', {
+	    attrs: {
+	      "fill": "#333",
+	      "d": "M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z"
+	    }
+	  })])]), " ", _h('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (highlight),
+	      expression: "highlight"
+	    }],
+	    staticClass: "vue-color__chrome__icon-highlight"
+	  })]), " "])])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-7", module.exports)
+	  }
+	}
 
 /***/ }
 /******/ ])
